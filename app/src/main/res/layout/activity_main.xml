@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvEntryTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Game Session Entry"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/lblDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date:"
+        android:textSize="18sp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEntryTitle"/>
+
+    <EditText
+        android:id="@+id/etDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:autofillHints="false"
+        android:clickable="true"
+        android:focusable="false"
+        android:hint="YYYY-MM-DD"
+        android:inputType="date"
+        android:longClickable="false"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/lblDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblDate"
+        app:layout_constraintTop_toTopOf="@+id/lblDate"/>
+
+    <TextView
+        android:id="@+id/lblMinutesPlayed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Minutes Played:"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDate"/>
+
+    <EditText
+        android:id="@+id/etMinutesPlayed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:autofillHints=""
+        android:hint="e.g., 60"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/lblMinutesPlayed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblMinutesPlayed"
+        app:layout_constraintTop_toTopOf="@+id/lblMinutesPlayed"/>
+
+    <TextView
+        android:id="@+id/lblGameGenre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Game Genre:"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etMinutesPlayed"/>
+
+    <Spinner android:id="@+id/spinnerGenre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:entries="@array/game_genres"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/lblGameGenre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblGameGenre"
+        app:layout_constraintTop_toTopOf="@+id/lblGameGenre"/>
+
+    <TextView
+        android:id="@+id/lblRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rating (1-5):"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerGenre"/>
+
+    <Spinner
+        android:id="@+id/spinnerRating"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:entries="@array/ratings"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/lblRating"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblRating"
+        app:layout_constraintTop_toTopOf="@+id/lblRating"/>
+    <Button
+        android:id="@+id/btnAddEntry"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Add Entry"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnClearInputs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerRating"/>
+
+    <Button
+        android:id="@+id/btnClearInputs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Clear Inputs"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnAddEntry"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerRating"/>
+
+    <Button
+        android:id="@+id/btnGoToDetails"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Go to Details"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddEntry"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

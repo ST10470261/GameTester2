@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Game tester 2</string>
+    <string name="app_logo_description" />
+    <string name="app_logo_content_description" />
+    <string name="btn_add_entry" />
+    <string name="btn_clear_inputs" />
+    <string name="btn_go_to_details" />
+    <string name="btn_exit_app" />
+    <string name="btn_back_to_main" />
+    <string name="tv_entry_title" />
+    <string name="tv_details_title" />
+
+    <string-array name="game_genres">
+        <item>Action</item>
+        <item>Adventure</item>
+        <item>RPG</item>
+        <item>Strategy</item>
+        <item>Simulation</item>
+        <!-- Add more genres as needed -->
+    </string-array>
+
+    <string-array name="ratings">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+</resources>
